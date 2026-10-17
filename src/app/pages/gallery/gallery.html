@@ -1,0 +1,96 @@
+<div class="gallery-page">
+  <header class="gallery-navbar">
+    <a routerLink="/" class="back-link">← Retour à l'accueil</a>
+    <nav class="nav-links">
+      <a routerLink="/mon-travail/equestres" class="nav-link" [class.active]="currentConfig().id === 'equestres'">Équestres</a>
+      <a routerLink="/mon-travail/animaux" class="nav-link" [class.active]="currentConfig().id === 'animaux'">Animaux</a>
+      <a routerLink="/mon-travail/portraits" class="nav-link" [class.active]="currentConfig().id === 'portraits'">Portraits</a>
+      <a routerLink="/mon-travail/lieux" class="nav-link" [class.active]="currentConfig().id === 'lieux'">Lieux</a>
+      <a routerLink="/mon-travail/noir-et-blanc" class="nav-link" [class.active]="currentConfig().id === 'noir-et-blanc'">Noir&Blanc</a>
+      <a routerLink="/contact" class="nav-link contact-pill">Contact</a>
+    </nav>
+  </header>
+
+  <main class="gallery-main">
+    <h1 class="gallery-title">{{ currentConfig().title }}</h1>
+
+    <div class="gallery-container">
+      @switch (currentConfig().id) {
+        @case ('equestres') {
+          <!-- Mon travail 1 : Equestres -->
+          <div class="layout-equestres">
+            <div class="row-top">
+              <div class="photo-placeholder item-1"></div>
+              <div class="photo-placeholder item-2"></div>
+            </div>
+            <div class="row-bottom">
+              <div class="photo-placeholder item-3"></div>
+              <div class="photo-placeholder item-4"></div>
+              <div class="photo-placeholder item-5"></div>
+            </div>
+          </div>
+        }
+
+        @case ('animaux') {
+          <!-- Mon travail 2 : Animaux -->
+          <div class="layout-animaux">
+            <div class="row-top">
+              <div class="photo-placeholder item-1"></div>
+            </div>
+            <div class="row-bottom">
+              <div class="col-left">
+                <div class="photo-placeholder item-2"></div>
+              </div>
+              <div class="col-right">
+                <div class="photo-placeholder item-3"></div>
+                <div class="photo-placeholder item-4"></div>
+              </div>
+            </div>
+          </div>
+        }
+
+        @case ('portraits') {
+          <!-- Mon travail 3 : Portraits -->
+          <div class="layout-portraits">
+            <div class="row-top">
+              <div class="photo-placeholder item-1"></div>
+              <div class="photo-placeholder item-2"></div>
+            </div>
+            <div class="row-bottom">
+              <div class="photo-placeholder item-3"></div>
+              <div class="photo-placeholder item-4"></div>
+            </div>
+          </div>
+        }
+
+        @case ('lieux') {
+          <!-- Mon travail 4 : Lieux -->
+          <div class="layout-lieux">
+            <div class="row-top">
+              <div class="photo-placeholder item-1"></div>
+              <div class="photo-placeholder item-2"></div>
+            </div>
+            <div class="row-bottom">
+              <div class="photo-placeholder item-3"></div>
+              <div class="photo-placeholder item-4"></div>
+            </div>
+          </div>
+        }
+
+        @case ('noir-et-blanc') {
+          <!-- Mon travail 5 : Noir&Blanc -->
+          <div class="layout-noir-blanc">
+            <div class="row-top">
+              <div class="photo-placeholder item-1"></div>
+              <div class="photo-placeholder item-2"></div>
+            </div>
+            <div class="row-bottom">
+              <div class="photo-placeholder item-3"></div>
+              <div class="photo-placeholder item-4"></div>
+            </div>
+          </div>
+        }
+      }
+    </div>
+  </main>
+</div>

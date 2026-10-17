@@ -1,0 +1,392 @@
+.gallery-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  padding: 2rem 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+
+  .gallery-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .back-link {
+      font-family: var(--font-dm-sans);
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      opacity: 0.85;
+
+      &:hover {
+        opacity: 1;
+        transform: translateX(-3px);
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+
+      .nav-link {
+        font-family: var(--font-dm-sans);
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        position: relative;
+        padding-bottom: 4px;
+        opacity: 0.75;
+        transition: var(--transition-smooth);
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: var(--text-dark);
+          transition: width 0.3s ease;
+        }
+
+        &:hover,
+        &.active {
+          opacity: 1;
+          font-weight: 600;
+
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &.contact-pill {
+          padding: 0.35rem 1.1rem;
+          border: 1px solid var(--border-dark);
+          opacity: 1;
+
+          &::after {
+            display: none;
+          }
+
+          &:hover {
+            background-color: var(--text-dark);
+            color: var(--bg-cream);
+          }
+        }
+      }
+    }
+  }
+
+  .gallery-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .gallery-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+      letter-spacing: 0.02em;
+    }
+
+    .gallery-container {
+      width: 100%;
+      background-color: var(--bg-cream);
+    }
+  }
+}
+
+/* =======================================
+   PHOTO PLACEHOLDER COMMON STYLING
+   ======================================= */
+.photo-placeholder {
+  background-color: var(--bg-cream);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.92;
+  }
+}
+
+/* =======================================
+   1. LAYOUT ÉQUESTRES
+   ======================================= */
+.layout-equestres {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .row-top {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 480;
+  }
+
+  .row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 520;
+  }
+
+  .item-1 {
+    background-image: url('/img/equestres/equestres_2.webp');
+  }
+
+  .item-2 {
+    background-image: url('/img/equestres/equestres_3.webp');
+  }
+
+  .item-3 {
+    background-image: url('/img/equestres/equestres_4.webp');
+  }
+
+  .item-4 {
+    background-image: url('/img/equestres/equestres_5.webp');
+  }
+
+  .item-5 {
+    background-image: url('/img/equestres/equestres_6.webp');
+  }
+}
+
+/* =======================================
+   2. LAYOUT ANIMAUX
+   ======================================= */
+.layout-animaux {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .row-top {
+    aspect-ratio: 1200 / 420;
+  }
+
+  .row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 600;
+
+    .col-left {
+      height: 100%;
+    }
+
+    .col-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 100%;
+
+      .photo-placeholder {
+        flex: 1;
+        height: calc(50% - 5px);
+      }
+    }
+  }
+
+  .item-1 {
+    background-image: url('/img/animaux/animaux_2.webp');
+  }
+
+  .item-2 {
+    background-image: url('/img/animaux/animaux_3.webp');
+  }
+
+  .item-3 {
+    background-image: url('/img/animaux/animaux_4.webp');
+  }
+
+  .item-4 {
+    background-image: url('/img/animaux/animaux_5.webp');
+  }
+}
+
+/* =======================================
+   3. LAYOUT PORTRAITS
+   ======================================= */
+.layout-portraits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .row-top {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 520;
+  }
+
+  .row-bottom {
+    display: grid;
+    grid-template-columns: 1.3fr 1.6fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 480;
+  }
+
+  .item-1 {
+    background-image: url('/img/portraits/portraits_2.webp');
+  }
+
+  .item-2 {
+    background-image: url('/img/portraits/portraits_3.webp');
+  }
+
+  .item-3 {
+    background-image: url('/img/portraits/portraits_4.webp');
+  }
+
+  .item-4 {
+    background-image: url('/img/portraits/portraits_5.webp');
+  }
+}
+
+/* =======================================
+   4. LAYOUT LIEUX
+   ======================================= */
+.layout-lieux {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .row-top {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 420;
+  }
+
+  .row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 560;
+  }
+
+  .item-1 {
+    background-image: url('/img/lieux/lieux_3.webp');
+  }
+
+  .item-2 {
+    background-image: url('/img/lieux/lieux_4.webp');
+  }
+
+  .item-3 {
+    background-image: url('/img/lieux/lieux_5.webp');
+  }
+
+  .item-4 {
+    background-image: url('/img/lieux/lieux_6.webp');
+  }
+}
+
+/* =======================================
+   5. LAYOUT NOIR & BLANC
+   ======================================= */
+.layout-noir-blanc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  .row-top {
+    display: grid;
+    grid-template-columns: 1fr 1.85fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 500;
+  }
+
+  .row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1.85fr;
+    gap: 10px;
+    aspect-ratio: 1200 / 460;
+  }
+
+  .item-1 {
+    background-image: url('/img/noirblanc/noirblanc_1.webp');
+  }
+
+  .item-2 {
+    background-image: url('/img/noirblanc/noirblanc_2.webp');
+  }
+
+  .item-3 {
+    background-image: url('/img/noirblanc/noirblanc_3.webp');
+  }
+
+  .item-4 {
+    background-image: url('/img/noirblanc/noirblanc_4.webp');
+  }
+}
+
+/* =======================================
+   RESPONSIVE DESIGN
+   ======================================= */
+@media screen and (max-width: 900px) {
+  .gallery-page {
+    padding: 1.5rem 1rem 3rem;
+
+    .gallery-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+
+    .layout-equestres,
+    .layout-animaux,
+    .layout-portraits,
+    .layout-lieux,
+    .layout-noir-blanc {
+      .row-top,
+      .row-bottom {
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+        aspect-ratio: auto !important;
+
+        .photo-placeholder {
+          height: 300px !important;
+        }
+      }
+
+      .row-bottom .col-right {
+        .photo-placeholder {
+          height: 250px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<div class="home-container">
+  <!-- SECTION 1: HOME -->
+  <section id="hero" class="snap-section hero-section">
+    <header class="hero-navbar">
+      <nav class="nav-links">
+        <a (click)="scrollToSection('about')" class="nav-link" tabindex="0">À propos de moi</a>
+        <a (click)="scrollToSection('work')" class="nav-link" tabindex="0">Mon travail</a>
+        <a routerLink="/contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Marina J Photographie</h1>
+      <p class="hero-subtitle">Photographe professionnelle</p>
+      <a routerLink="/contact" class="hero-cta-btn">Travaillez avec moi</a>
+    </div>
+
+    <div class="scroll-hint" (click)="scrollToSection('about')" title="Défiler vers le bas">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: A PROPOS DE MOI -->
+  <section id="about" class="snap-section about-section">
+    <div class="about-card">
+      <h2 class="section-title">A propos de moi</h2>
+      <div class="about-text">
+        <div>Moi, c’est Marina, photographe freelance.</div>
+        <div>
+          La photographie m’accompagne depuis toute petite, inspirée par mon père qui aimait
+          immortaliser les moments du quotidien et des vacances. J’ai ensuite développé mon propre
+          univers autour de ce qui me passionne : les chevaux, les animaux, les portraits et les paysages.
+        </div>
+        <div>
+          J’aime capturer des images naturelles, spontanées et authentiques, en mettant en valeur
+          les émotions, les regards et les petits instants qui racontent une histoire.
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" (click)="scrollToSection('work')" title="Défiler vers le bas">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- SECTION 3: MON TRAVAIL -->
+  <section id="work" class="snap-section work-section">
+    <div class="work-header">
+      <h2 class="work-title">Mon travail</h2>
+      <div class="work-description">
+        <div>Jetez un œil à quelques-uns de mes projets, réalisés avec soin et conçus pour avoir un impact.</div>
+        <div>Chacun d'entre eux raconte une histoire de créativité, de collaboration et de résultats.</div>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- Équestres -->
+      <a routerLink="/mon-travail/equestres" class="grid-card card-equestres" aria-label="Galerie Équestres">
+        <div class="image-placeholder"></div>
+        <div class="card-badge">Équestres</div>
+      </a>
+
+      <!-- Animaux & Lieux -->
+      <div class="grid-column">
+        <a routerLink="/mon-travail/animaux" class="grid-card card-animaux" aria-label="Galerie Animaux">
+          <div class="image-placeholder"></div>
+          <div class="card-badge">Animaux</div>
+        </a>
+        <a routerLink="/mon-travail/lieux" class="grid-card card-lieux" aria-label="Galerie Lieux">
+          <div class="image-placeholder"></div>
+          <div class="card-badge">Lieux</div>
+        </a>
+      </div>
+
+      <!-- Portraits & Noir&Blanc -->
+      <div class="grid-column">
+        <a routerLink="/mon-travail/portraits" class="grid-card card-portraits" aria-label="Galerie Portraits">
+          <div class="image-placeholder"></div>
+          <div class="card-badge">Portraits</div>
+        </a>
+        <a routerLink="/mon-travail/noir-et-blanc" class="grid-card card-noir-blanc" aria-label="Galerie Noir et Blanc">
+          <div class="image-placeholder"></div>
+          <div class="card-badge">Noir&Blanc</div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

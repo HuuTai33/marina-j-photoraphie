@@ -1,0 +1,129 @@
+/* Global Styles & Design System */
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/Migra-Extralight.otf') format('opentype');
+  font-weight: 100 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/Migra-Extralight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/Migra-Extrabold.otf') format('opentype');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/Migra-Extrabold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/MigraItalic-ExtralightItalic.otf') format('opentype');
+  font-weight: 100 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/MigraItalic-ExtralightItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/MigraItalic-ExtraboldItalic.otf') format('opentype');
+  font-weight: 600 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Migra';
+  src: url('/fonts/MigraItalic-ExtraboldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --bg-dark: #1b1817;
+  --bg-dark-overlay: rgba(20, 18, 17, 0.85);
+  --bg-cream: #f6efe6;
+  --bg-cream-card: #f7f0de;
+  --text-dark: #221f1e;
+  --text-muted: #4e4a46;
+  --text-cream: #f8f2e9;
+  --text-cream-muted: #dcd4c8;
+  --border-cream: #f8f2e9;
+  --border-dark: #221f1e;
+  --font-serif: 'Migra', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Migra', 'Montserrat', system-ui, -apple-system, sans-serif;
+  --font-dm-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-serif);
+  background-color: var(--bg-dark);
+  color: var(--text-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e3a38;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5452;
+}
