@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "marina-j-photographie",
+  "compatibility_date": "2026-10-18",
+  "assets": {
+    "directory": "./dist/marina-photography/browser",
+    "not_found_handling": "404-page"
+  }
+}
