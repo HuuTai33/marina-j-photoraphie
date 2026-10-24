@@ -37,6 +37,18 @@ describe('App & Pages', () => {
     expect(compiled.querySelector('.contact-info')?.textContent).toContain('marinajphoto@gmail.com');
   });
 
+  it('should scroll to section when fragment is provided', async () => {
+    vi.useFakeTimers();
+    const fixture = TestBed.createComponent(HomeComponent);
+    const component = fixture.componentInstance;
+    const scrollSpy = vi.spyOn(component, 'scrollToSection');
+    fixture.detectChanges();
+
+    component.scrollToSection('about');
+    expect(scrollSpy).toHaveBeenCalledWith('about');
+    vi.useRealTimers();
+  });
+
   it('should render Gallery page with specified category', () => {
     const fixture = TestBed.createComponent(GalleryComponent);
     fixture.componentRef.setInput('category', 'equestres');
